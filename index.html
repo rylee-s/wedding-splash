@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maddie And James</title>
+  <link rel="stylesheet" href="dist/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body class="h-screen backdrop-blur bg-gradient-to-tr from-teal-200 via-teal-600 to-cyan-900">
+  <div class="container mx-auto h-full">
+    <div class="flex justify-center h-full">
+      <div class="absolute bottom-1/2">
+        <div class="p-5 bg-white rounded-full shadow-lg">
+          <h1 class="text-4xl text-center cursive">Maddie & James</h1>
+          <p class="text-center">Coming Soon</p>
+        </div>
+      </div>
+      <div class="absolute bottom-20 flex gap-5 text-white">
+        <div class="text-center">
+          <span class="countdown font-mono text-4xl">
+            <span id="days"></span>
+          </span>
+          <br/>
+          days
+        </div>
+        <div class="text-center">
+          <span class="countdown font-mono text-4xl">
+            <span id="hours"></span>
+          </span>
+          <br/>
+          hours
+        </div>
+        <div class="text-center">
+          <span class="countdown font-mono text-4xl">
+            <span id="minutes"></span>
+          </span>
+          <br/>
+          minutes
+        </div>
+        <div class="text-center">
+          <span class="countdown font-mono text-4xl">
+            <span id="seconds"></span>
+          </span>
+          <br/>
+          seconds
+        </div>
+      </div>
+    </div>
+</body>
+<script>
+  function updateTimer() {
+    future = Date.parse("November 16 2024 01:30:00");
+    now = new Date();
+    diff = future - now;
+
+    days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    hours = Math.floor(diff / (1000 * 60 * 60));
+    mins = Math.floor(diff / (1000 * 60));
+    secs = Math.floor(diff / 1000);
+
+    d = days;
+    h = hours - days * 24;
+    m = mins - hours * 60;
+    s = secs - mins * 60;
+
+    document.getElementById("days").innerHTML = d;
+    document.getElementById("hours").innerHTML = h;
+    document.getElementById("minutes").innerHTML = m;
+    document.getElementById("seconds").innerHTML = s;
+  }
+  setInterval('updateTimer()', 1000);
+</script>
+
+</html>
