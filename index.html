@@ -4,8 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Maddie and James ❤️">
+  <meta name="twitter:title" content="Maddie and James ❤️">
+  
+  <meta name="description" content="Test Description">
+  <meta property="og:description" content="Test Description">
+  <meta name="twitter:description" content="Test Description">
+  
+  <meta property="og:image" content="img_url">
+  <meta name="twitter:image" content="img_url">
   <title>Maddie And James</title>
   <link rel="stylesheet" href="output.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -15,8 +25,6 @@
 background-color: rgb(24, 24, 27);
 background-image: radial-gradient(at 50% 50%, rgb(159, 18, 57) 0, transparent 100%);
 ">
-
-<!-- bg-gradient-to-tr from-teal-200 via-teal-600 to-cyan-900"> -->
   <div class="container mx-auto h-full">
     <div class="flex justify-center h-full">
       <div class="absolute bottom-1/2">
@@ -25,33 +33,33 @@ background-image: radial-gradient(at 50% 50%, rgb(159, 18, 57) 0, transparent 10
           <p class="text-center mt-2">Coming Soon</p>
         </div>
       </div>
-      <div class="absolute bottom-20 flex gap-5 text-white"  style="text-shadow: 0px 10px 14px black">
+      <div class="absolute bottom-20 flex gap-5 text-white" style="text-shadow: 0px 10px 14px black">
         <div class="text-center">
           <span class="countdown font-mono text-4xl">
             <span id="days"></span>
           </span>
-          <br/>
+          <br />
           days
         </div>
         <div class="text-center">
           <span class="countdown font-mono text-4xl">
             <span id="hours"></span>
           </span>
-          <br/>
+          <br />
           hours
         </div>
         <div class="text-center">
           <span class="countdown font-mono text-4xl">
             <span id="minutes"></span>
           </span>
-          <br/>
+          <br />
           minutes
         </div>
         <div class="text-center">
           <span class="countdown font-mono text-4xl">
             <span id="seconds"></span>
           </span>
-          <br/>
+          <br />
           seconds
         </div>
       </div>
@@ -77,7 +85,7 @@ background-image: radial-gradient(at 50% 50%, rgb(159, 18, 57) 0, transparent 10
     document.getElementById("hours").innerHTML = h;
     document.getElementById("minutes").innerHTML = m;
     document.getElementById("seconds").innerHTML = s;
-    
+
   }
   setInterval('updateTimer()', 1000);
 </script>
